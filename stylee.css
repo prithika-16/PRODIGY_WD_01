@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 60px;
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Hover underline animation */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: yellow;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Scroll effect */
+nav.scrolled {
+    background: #111;
+    padding: 15px 60px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Sections */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+}
+
+.section:nth-child(2) { background: #3498db; }
+.section:nth-child(3) { background: #2ecc71; }
+.section:nth-child(4) { background: #9b59b6; }
